@@ -1,0 +1,23 @@
+<form  class="formModal">
+  <h2 mat-dialog-title>{{data.tittle}} employee</h2>
+  <mat-dialog-content>
+    <form class="inputsModalForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="Name" [(ngModel)]="data.name"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput type="text" name="Age" [(ngModel)]="data.age"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Salary</mat-label>
+        <input matInput type="text" name="Salary" [(ngModel)]="data.salary"/>
+      </mat-form-field>
+    </form>
+    <mat-dialog-actions>
+      <button mat-button [mat-dialog-close]="true">yes</button>
+      <button mat-button mat-dialog-close>no</button>
+    </mat-dialog-actions>
+  </mat-dialog-content>
+</form>

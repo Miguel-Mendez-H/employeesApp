@@ -1,0 +1,56 @@
+<div class="containerProfile">
+    <div class="cardProfile">
+        <span class="userInfoTittle"> User info </span>
+      <div class="containerImg">
+        <div class="profileImage" *ngIf="dataUserInfo?.employee_age >= 30">
+          <img src="/assets/PNG/design.png" alt="backgroundImageColor" class="fit-Image" />
+          <img
+            src="assets/PNG/morethan30.png"
+            alt="Imagen persona mayor o igual de 30"
+            class="fit-Image"
+          />
+        </div>
+        <div class="profileImage" *ngIf="dataUserInfo?.employee_age < 30">
+          <img src="/assets/PNG/design.png" alt="backgroundImageColor" class="fit-Image" />
+          <img
+            src="assets/PNG/lessthan30.png"
+            alt="Imagen persona menor de 30"
+            class="fit-Image"
+          />
+        </div>
+      </div>
+      <div class="containerInfo">
+        <div class="detailsInfo">
+          <span class="tittlesProfile"> Name </span>
+          <br />
+          <span class="infoToDisplay">
+            {{ dataUserInfo?.employee_name || "Name not available" }}</span
+          >
+        </div>
+        <div class="detailsInfo">
+          <span class="tittlesProfile"> Age </span>
+          <br />
+          <span class="infoToDisplay">
+            {{ dataUserInfo?.employee_age || "Age not available" }}</span
+          >
+        </div>
+  
+        <div class="detailsInfo">
+          <span class="tittlesProfile"> Salary </span>
+          <br />
+          <span class="infoToDisplay">
+            {{
+                dataUserInfo?.employee_salary.toLocaleString("en-US", {
+                style: "currency",
+                currency: "USD"
+              }) || "Salary not available"
+            }}</span
+          >
+        </div>
+        <div class="buttonsInfo">
+          <button class="buttonEdit" (click)="updateUser()">Edit profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

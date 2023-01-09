@@ -1,0 +1,39 @@
+<div class="containerCards">
+  <div class="card" *ngFor="let employee of employees" (click)="selectEmployeeId(employee.id)"  >
+    <div class="containerImg">
+      <div class="profileImage" *ngIf="employee.employee_age >= 30">
+        <img
+          src="assets/JPG/morethan30.jpg"
+          alt="Imagen persona mayor o igual de 30"
+          class="circle-Image"
+        />
+      </div>
+      <div class="profileImage" *ngIf="employee.employee_age < 30">
+        <img
+          src="assets/JPG/lessthan30.jpg"
+          alt="Imagen persona menor de 30"
+          class="circle-Image"
+        />
+      </div>
+    </div>
+    <div class="containerInfo">
+      <div class="employeeName">
+        <span class="tittle">Employee name: </span>
+        <span>{{ employee.employee_name }}</span>
+      </div>
+      <div class="employeeAge">
+        <span class="tittle">Age: </span>
+        <span>{{ employee.employee_age }}</span>
+      </div>
+      <div class="employeeSalary">
+        <span class="tittle">Salary: </span>
+        <span>{{
+          employee.employee_salary.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD"
+          })
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>

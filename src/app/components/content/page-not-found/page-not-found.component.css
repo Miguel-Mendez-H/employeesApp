@@ -1,0 +1,11 @@
+.containerNotFound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+}
+
+.image404{
+    max-width: 400px;
+}
+

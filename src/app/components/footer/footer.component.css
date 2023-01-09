@@ -1,0 +1,19 @@
+.footerToolBar{
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    height: 80px;
+    display: flex;
+    place-content: space-around;
+    border-top: 2px solid #eceef1;
+}
+
+.ButtonsFooter{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    font-size: 10px;
+  }
+  
